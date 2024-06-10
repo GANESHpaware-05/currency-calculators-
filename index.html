@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Currency Converter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	</script>
+
+	<link rel="preconnect"
+		href=
+"https://fonts.gstatic.com">
+	<link href=
+"https://fonts.googleapis.com/css2?family=Amiri&family=Lobster&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<!-- linking style.css file-->
+	<link rel="stylesheet" href="style.css">
+	<!-- icons style -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://kit.fontawasome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="icons.css">
+</head>
+
+<body>
+		
+<!-- social icons section -->
+
+<div class="social-icons">
+	<ul>
+		<li> <a href="https://www.instagram.com/ganesh_paware_05/" target="_blank"><i class="fa-brands fa-instagram fa-beat-fade" style="color: #c92e5c;"></i> </a></li>
+		<li> <a href="https://www.facebook.com/ganesh.paware.1232" target="_blank"> <i class="fa-brands fa-facebook fa-beat-fade" style="color: #2446bb;"></i> </a></li>
+		<li> <a href="https://wa.me/918817125398" target="_blank"> <i class="fa-brands fa-whatsapp fa-beat-fade" style="color: #23dca5;"></i> </a></li>
+		<li> <a href="https://www.linkedin.com/in/ganesh-paware-2111a1259/" target="_blank"> <i class="fa-brands fa-linkedin-in fa-beat-fade" style="color: #0080ff;"></i> </a></li>
+		<li> <a href="https://github.com/GANESHpaware-05" target="_blank"> <i class="fa-brands fa-github fa-beat-fade" style="color: #000031;"></i> </a></li>
+	</ul>
+	
+	<!-- Currency Converter -->
+
+	<h1 class="heading text-center display-2">
+		Currency Converter 2.0
+	</h1>
+	<hr>
+	<div class="container">
+		<div class="main">
+			<div class="form-group">
+				<label for="oamount">
+					Enter Amount to Convert :
+				</label>
+				<input type="text" class="form-control searchBox" placeholder="Eg. 0.00" id="oamount">
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">From</span>
+						</div>
+						<select class="form-control from" id="sel1">
+							<option value="">Select One …</option>
+							<option value="ARS">Argentina Peso</option>
+							<option value="DZD">Algeria Dinar</option>
+							<option value="ALL">Albania Lek</option>
+							<option value="AFN">Afghanistan Afghani</option>
+							<option value="AUD">Australia Dollar</option>
+							<option value="BGN">Bulgaria Lev</option>
+							<option value="BEF (EURO)">Belgium Franc</option>
+							<option value="BRL">Brazil - Real</option>
+							<option value="BSD">Bahamas Dollar</option>
+							<option value="BTN">Bhutan - Ngultrum</option>
+							<option value="BBD">Barbados - Dollar</option>
+							<option value="BMD">Bermuda - Dollar</option>
+							<option value="BDT">Bangladesh - Taka</option>
+							<option value="CAD">Canada - Dollar</option>
+							<option value="CLP">Chili Peso</option>
+							<option value="CNY">China - Yuan</option>
+							<option value="COP">Colombia Peso</option>
+							<option value="CZK">Czech Koruna</option>
+							<option value="DKK">Denmark Krone</option>
+							<option value="DOP">Dominican Republich Peso</option>
+							<option value="EGP">Egypt Pound</option>
+							<option value="EUR">France</option>
+							<option value="FJD">Fiji Dollar</option>
+							<option value="FIM (EURO)">Finland Markka</option>
+							<option value="GRD (EURO)">Greece Drachma</option>
+							<option value="EUR">Germany</option>
+							<option value="DKK">Greenland</option>
+							<option value="GTQ">Guatemala Quetzal</option>
+							<option value="GEL">Georgia Lari</option>
+							<option value="HKD">Hong Kong Dollar</option>
+							<option value="HRK">HRK</option>
+							<option value="HUF">Hungary</option>
+							<option value="INR">India - Rupee</option>
+							<option value="IDR">Indonesia - Rupiah</option>
+							<option value="ILS">Israel</option>
+							<option value="ISK">Iceland Krona</option>
+							<option value="IRR">Iran - Rial</option>
+							<option value="ITL (EURO)">Italy</option>
+							<option value="IED (EURO)">Ireland Pound</option>
+							<option value="IQD">Iraq - Dinar</option>
+							<option value="JPY">Japan Yen</option>
+							<option value="JOD">Jordan - Dinar</option>
+							<option value="KRW">Korea - Won</option>
+							<option value="KZT">Kazakhstan</option>
+							<option value="KES">Kenya - Shilling</option>
+							<option value="KWD">Kuwait - Dinar</option>
+							<option value="MVR">Maldives</option>
+							<option value="MXN">Mexico</option>
+							<option value="MNT">Mongolia</option>
+							<option value="MYR">Malaysia</option>
+							<option value="MAD">Morocco</option>
+							<option value="MMK">Myanmar - Kyat</option>
+							<option value="NOK">Norway</option>
+							<option value="NAD">Namibia - Dollar</option>
+							<option value="NPR">Nepal - Rupee</option>
+							<option value="EUR">Netherlands</option>
+							<option value="NZD">New Zealand - Dollar</option>
+							<option value="NGN">Nigeria</option>
+							<option value="OMR">Oman - Riyal</option>
+							<option value="PAB">Panama</option>
+							<option value="PEN">Peru</option>
+							<option value="PHP">Philippines - Peso</option>
+							<option value="PKR">pakistan-Rupees</option>
+							<option value="PLN">Poland</option>
+							<option value="EUR">Portugal</option>
+							<option value="PYG">Paraguay</option>
+							<option value="QAR">Qatar - Riyal</option>
+							<option value="RON">Romania</option>
+							<option value="RUB">Russia - Rouble</option>
+							<option value="RWF">Rwanda</option>
+							<option value="ZAR">South Africa - Rand</option>
+							<option value="EUR">Spain</option>
+							<option value="SDG">Sudan - Pound</option>
+							<option value="SOS">Somalia - shilling</option>
+							<option value="SAR">Saudi Arabia - Riyal</option>
+							<option value="SEK">Sweden</option>
+							<option value="RSD">Serbia - Dinar</option>
+							<option value="SYP">Syria - Pound</option>
+							<option value="CHF">Switzerland</option>
+							<option value="LKR">Sri Lanka</option>
+							<option value="SGD">Singapore - Dollar</option>
+							<option value="THB">Thailand</option>
+							<option value="TRY">Turkey - Lira</option>
+							<option value="TND">Tunisia - Dinar</option>
+							<option value="TWD">Taiwan - New Dollar</option>
+							<option value="TJS">Tajikistan</option>
+							<option value="USD">United State - Dollar</option>
+							<option value="GBP">United Kingdom - pound</option>
+							<option value="AED">United Arab Emirates</option>
+							<option value="UAH">Ukraine</option>
+							<option value="UZS">Uzbekistan</option>
+							<option value="UGX">Uganda</option>
+							<option value="UYU">Uruguay</option>
+							<option value="VEF">Venezuela</option>
+							<option value="VND">Vietnam - Dong</option>
+							<option value="YER">Yemen-Rial</option>
+							<option value="ZMW">Zambia-Kwacha</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">To</span>
+						</div>
+						<select class="form-control to" id="sel2">
+							<option value="ARS">Argentina Peso</option>
+							<option value="DZD">Algeria Dinar</option>
+							<option value="ALL">Albania Lek</option>
+							<option value="AFN">Afghanistan Afghani</option>
+							<option value="AUD">Australia Dollar</option>
+							<option value="BGN">Bulgaria Lev</option>
+							<option value="BEF (EURO)">Belgium Franc</option>
+							<option value="BRL">Brazil - Real</option>
+							<option value="BSD">Bahamas Dollar</option>
+							<option value="BTN">Bhutan - Ngultrum</option>
+							<option value="BBD">Barbados - Dollar</option>
+							<option value="BMD">Bermuda - Dollar</option>
+							<option value="BDT">Bangladesh - Taka</option>
+							<option value="CAD">Canada - Dollar</option>
+							<option value="CLP">Chili Peso</option>
+							<option value="CNY">China - Yuan</option>
+							<option value="COP">Colombia Peso</option>
+							<option value="CZK">Czech Koruna</option>
+							<option value="DKK">Denmark Krone</option>
+							<option value="DOP">Dominican Republich Peso</option>
+							<option value="EGP">Egypt Pound</option>
+							<option value="EUR">France</option>
+							<option value="FJD">Fiji Dollar</option>
+							<option value="FIM (EURO)">Finland Markka</option>
+							<option value="GRD (EURO)">Greece Drachma</option>
+							<option value="EUR">Germany</option>
+							<option value="DKK">Greenland</option>
+							<option value="GTQ">Guatemala Quetzal</option>
+							<option value="GEL">Georgia Lari</option>
+							<option value="HKD">Hong Kong Dollar</option>
+							<option value="HRK">HRK</option>
+							<option value="HUF">Hungary</option>
+							<option value="INR">India - Rupee</option>
+							<option value="IDR">Indonesia - Rupiah</option>
+							<option value="ILS">Israel</option>
+							<option value="ISK">Iceland Krona</option>
+							<option value="IRR">Iran - Rial</option>
+							<option value="ITL (EURO)">Italy</option>
+							<option value="IED (EURO)">Ireland Pound</option>
+							<option value="IQD">Iraq - Dinar</option>
+							<option value="JPY">Japan Yen</option>
+							<option value="JOD">Jordan - Dinar</option>
+							<option value="KRW">Korea - Won</option>
+							<option value="KZT">Kazakhstan</option>
+							<option value="KES">Kenya - Shilling</option>
+							<option value="KWD">Kuwait - Dinar</option>
+							<option value="MVR">Maldives</option>
+							<option value="MXN">Mexico</option>
+							<option value="MNT">Mongolia</option>
+							<option value="MYR">Malaysia</option>
+							<option value="MAD">Morocco</option>
+							<option value="MMK">Myanmar - Kyat</option>
+							<option value="NOK">Norway</option>
+							<option value="NAD">Namibia - Dollar</option>
+							<option value="NPR">Nepal - Rupee</option>
+							<option value="EUR">Netherlands</option>
+							<option value="NZD">New Zealand - Dollar</option>
+							<option value="NGN">Nigeria</option>
+							<option value="OMR">Oman - Riyal</option>
+							<option value="PAB">Panama</option>
+							<option value="PEN">Peru</option>
+							<option value="PHP">Philippines - Peso</option>
+							<option value="PKR">pakistan-Rupees</option>
+							<option value="PLN">Poland</option>
+							<option value="EUR">Portugal</option>
+							<option value="PYG">Paraguay</option>
+							<option value="QAR">Qatar - Riyal</option>
+							<option value="RON">Romania</option>
+							<option value="RUB">Russia - Rouble</option>
+							<option value="RWF">Rwanda</option>
+							<option value="ZAR">South Africa - Rand</option>
+							<option value="EUR">Spain</option>
+							<option value="SDG">Sudan - Pound</option>
+							<option value="SOS">Somalia - shilling</option>
+							<option value="SAR">Saudi Arabia - Riyal</option>
+							<option value="SEK">Sweden</option>
+							<option value="RSD">Serbia - Dinar</option>
+							<option value="SYP">Syria - Pound</option>
+							<option value="CHF">Switzerland</option>
+							<option value="LKR">Sri Lanka</option>
+							<option value="SGD">Singapore - Dollar</option>
+							<option value="THB">Thailand</option>
+							<option value="TRY">Turkey - Lira</option>
+							<option value="TND">Tunisia - Dinar</option>
+							<option value="TWD">Taiwan - New Dollar</option>
+							<option value="TJS">Tajikistan</option>
+							<option value="USD">United State - Dollar</option>
+							<option value="GBP">United Kingdom - pound</option>
+							<option value="AED">United Arab Emirates</option>
+							<option value="UAH">Ukraine</option>
+							<option value="UZS">Uzbekistan</option>
+							<option value="UGX">Uganda</option>
+							<option value="UYU">Uruguay</option>
+							<option value="VEF">Venezuela</option>
+							<option value="VND">Vietnam - Dong</option>
+							<option value="YER">Yemen-Rial</option>
+							<option value="ZMW">Zambia-Kwacha</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center">
+
+				<!-- convert button -->
+				<button class="btn btn-primary convert m-2" type="submit">
+					Convert
+				</button>
+				<!-- reset button -->
+				<button class="btn btn-primary m-2" onclick="clearVal()">
+					Reset
+				</button>
+			</div>
+
+		</div>
+
+		<div id="finalAmount" class="text-center">
+
+			<!-- Display the converted amount -->
+			<h2>Converted Amount : ₹ 
+				<span class="finalValue" style="color:rgb(2, 37, 58);">
+				</span>
+			</h2>
+		</div>
+	</div>
+  
+	<!-- Contact us Section -->
+	
+	<section class="contact">
+		<div class="content">
+			<h2><i><b>Contact Us</b></i></h2>
+		</div>
+		<div class="Container">
+			<div class="contactInfo">
+				<div class="box">
+					<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Address</h3>
+						<p>S-7, New Rani Bagh,<br>Khandwa road,<br>Indore (m.p) <br>452020</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Phone</h3>
+						<p><a href="tel:8817125398">881-712-5398</a></p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Email</h3>
+						<p>ganeshpaware05@gmail.com</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- message box -->
+
+			<div class="contactform">
+				<form>
+					<h2><b>Send Message</b></h2>
+					<div class="inputBox">
+						<input type="text" name="fullName" required="required">
+						<span>Full Name</span>
+					</div>
+					<div class="inputBox">
+						<input type="text" name="email" required="required">
+						<span>Email</span>
+					</div>
+					<div class="inputBox">
+						<textarea name="message" required="required"></textarea>
+						<span>Type your Message...</span>
+					</div>
+					<div class="inputBox">
+						<input type="submit" value="Send">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- linking script.js file -->
+	<script src="script.js"></script>
+
+    <footer>
+    Developed By Ganesh paware
+    </footer>
+</div>
+</body>
+</html>

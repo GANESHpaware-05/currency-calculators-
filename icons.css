@@ -1,0 +1,107 @@
+/* Base styles */
+.social-icons ul {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items horizontally */
+}
+
+.social-icons ul li {
+    list-style-type: none;
+    margin: 0 15px;
+}
+
+.social-icons ul li.fab-brands {
+    font-size: 55px;
+    line-height: 60px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-icons ul li.fab-brands:hover {
+    color: #fff;
+}
+
+.social-icons ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(245, 243, 243);
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: .6s;
+}
+
+.social-icons ul li a:hover {
+    transform: translate(0, -10%);
+}
+
+/* Specific hover colors */
+.social-icons ul li:nth-child(1) a:hover {
+    background-color: rgba(235, 21, 160, 0.949);
+}
+
+.social-icons ul li:nth-child(2) a:hover {
+    background-color: rgba(28, 100, 233, 0.949);
+}
+
+.social-icons ul li:nth-child(3) a:hover {
+    background-color: rgba(43, 239, 131, 0.851);
+}
+
+.social-icons ul li:nth-child(4) a:hover {
+    background-color: rgb(87, 172, 246);
+}
+
+.social-icons ul li:nth-child(5) a:hover {
+    background-color: rgba(4, 27, 68, 0.883);
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .social-icons ul {
+        top: 10px;
+    }
+    .social-icons ul li {
+        margin: 0 10px;
+    }
+    .social-icons ul li.fab-brands {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .social-icons ul li a {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .social-icons ul {
+        top: 5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        flex-direction: column; /* Stack icons vertically on very small screens */
+        align-items: center;
+    }
+    .social-icons ul li {
+        margin: 10px 0;
+    }
+    .social-icons ul li.fab-brands {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .social-icons ul li a {
+        width: 40px;
+        height: 40px;
+    }
+}
