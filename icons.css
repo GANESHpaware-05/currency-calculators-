@@ -1,14 +1,15 @@
 /* Base styles */
 .social-icons ul {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    position:absolute; /* or position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make it span the full width */
     display: flex;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: center; /* Center items horizontally */
+    padding: 10px 0; /* Add padding for spacing */
+    margin: 0;
+   
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 .social-icons ul li {
@@ -41,36 +42,45 @@
     transition: .6s;
 }
 
-.social-icons ul li a:hover {
+.social-icons ul li a:hover,
+.social-icons ul li a:active { /* Add active state for touch devices */
     transform: translate(0, -10%);
 }
 
+/* Add a new class for zoom effect */
+.social-icons ul li.zoom-effect {
+    transform: scale(1.2); /* Scale the icon */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
 /* Specific hover colors */
-.social-icons ul li:nth-child(1) a:hover {
+.social-icons ul li:nth-child(1) a:hover,
+.social-icons ul li:nth-child(1) a:active {
     background-color: rgba(235, 21, 160, 0.949);
 }
 
-.social-icons ul li:nth-child(2) a:hover {
+.social-icons ul li:nth-child(2) a:hover,
+.social-icons ul li:nth-child(2) a:active {
     background-color: rgba(28, 100, 233, 0.949);
 }
 
-.social-icons ul li:nth-child(3) a:hover {
+.social-icons ul li:nth-child(3) a:hover,
+.social-icons ul li:nth-child(3) a:active {
     background-color: rgba(43, 239, 131, 0.851);
 }
 
-.social-icons ul li:nth-child(4) a:hover {
+.social-icons ul li:nth-child(4) a:hover,
+.social-icons ul li:nth-child(4) a:active {
     background-color: rgb(87, 172, 246);
 }
 
-.social-icons ul li:nth-child(5) a:hover {
+.social-icons ul li:nth-child(5) a:hover,
+.social-icons ul li:nth-child(5) a:active {
     background-color: rgba(4, 27, 68, 0.883);
 }
 
 /* Responsive styles for tablets and smaller screens */
 @media (max-width: 768px) {
-    .social-icons ul {
-        top: 10px;
-    }
     .social-icons ul li {
         margin: 0 10px;
     }
@@ -87,14 +97,10 @@
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     .social-icons ul {
-        top: 5px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        flex-direction: column; /* Stack icons vertically on very small screens */
-        align-items: center;
+        padding: 5px 0; /* Adjust padding for smaller screens */
     }
     .social-icons ul li {
-        margin: 10px 0;
+        margin: 0 5px; /* Reduce margin for smaller screens */
     }
     .social-icons ul li.fab-brands {
         font-size: 35px;
